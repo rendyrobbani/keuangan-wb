@@ -1,7 +1,7 @@
 package com.rendyrobbani.keuangan.infrastructure.persistence.converter;
 
 import com.rendyrobbani.keuangan.domain.model.vo.Pangkat;
-import com.rendyrobbani.keuangan.infrastructure.persistence.factory.PangkatEnum;
+import com.rendyrobbani.keuangan.infrastructure.vo.PangkatEnum;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

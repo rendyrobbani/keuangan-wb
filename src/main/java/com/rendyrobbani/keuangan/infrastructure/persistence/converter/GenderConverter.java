@@ -1,7 +1,7 @@
 package com.rendyrobbani.keuangan.infrastructure.persistence.converter;
 
 import com.rendyrobbani.keuangan.domain.model.vo.Gender;
-import com.rendyrobbani.keuangan.infrastructure.persistence.factory.GenderEnum;
+import com.rendyrobbani.keuangan.infrastructure.vo.GenderEnum;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

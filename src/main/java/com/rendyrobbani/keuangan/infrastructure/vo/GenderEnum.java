@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.infrastructure.persistence.factory;
+package com.rendyrobbani.keuangan.infrastructure.vo;
 
 import com.rendyrobbani.keuangan.domain.model.vo.Gender;
 import lombok.AccessLevel;

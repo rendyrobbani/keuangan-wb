@@ -25,6 +25,8 @@ public interface LogsUser extends Logs<DataUser, String> {
 
 	String titleSuffix();
 
+	String password();
+
 	LocalDate dateOfBirth();
 
 	LocalDate dateOfStart();

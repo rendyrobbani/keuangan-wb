@@ -1,7 +1,7 @@
 package com.rendyrobbani.keuangan.infrastructure.persistence.converter;
 
 import com.rendyrobbani.keuangan.domain.model.vo.Nip;
-import com.rendyrobbani.keuangan.infrastructure.persistence.factory.NipFactory;
+import com.rendyrobbani.keuangan.infrastructure.vo.NipFactory;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

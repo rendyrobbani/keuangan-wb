@@ -10,7 +10,8 @@ import java.io.Serializable;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @MappedSuperclass
-public abstract class AbstractBaseEntity<DOMAIN extends Base<ID>, ID> implements Base<ID>, Serializable {
+public abstract class AbstractBaseEntity<DOMAIN extends Base<ID>, ID> implements Base<ID>,
+                                                                                 Serializable {
 
 	@Serial
 	private static final long serialVersionUID = 1L;
