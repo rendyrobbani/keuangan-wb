@@ -1,6 +1,8 @@
 package com.rendyrobbani.keuangan.presentation.web.auth;
 
+import com.rendyrobbani.keuangan.application.web.record.auth.RecordOfWebAuthLoginRequest;
 import com.rendyrobbani.keuangan.application.web.record.auth.RecordOfWebAuthPreloginRequest;
+import com.rendyrobbani.keuangan.domain.port.incoming.web.auth.WebAuthLoginService;
 import com.rendyrobbani.keuangan.domain.port.incoming.web.auth.WebAuthPreloginService;
 import com.rendyrobbani.keuangan.presentation.web.WebResponse;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +19,7 @@ public class WebAuthController {
 
 	private final WebAuthPreloginService preloginService;
 
-//	private final WebAuthLoginService loginService;
+	private final WebAuthLoginService loginService;
 
 	@PostMapping("/web/auth/prelogin")
 	public ResponseEntity<?> prelogin(@RequestBody RecordOfWebAuthPreloginRequest request) {
@@ -25,9 +27,10 @@ public class WebAuthController {
 		return this.response.success(response);
 	}
 
-//	@PostMapping("/web/auth/login")
-//	public ResponseEntity<?> login(@RequestBody WebAuthLoginRequestRecord request) {
-//		var response = loginService.handle(request);
-//		return this.response.success(response);
-//	}
+	@PostMapping("/web/auth/login")
+	public ResponseEntity<?> login(@RequestBody RecordOfWebAuthLoginRequest request) {
+		var response = loginService.handle(request);
+		return this.response.success(response);
+	}
+
 }
