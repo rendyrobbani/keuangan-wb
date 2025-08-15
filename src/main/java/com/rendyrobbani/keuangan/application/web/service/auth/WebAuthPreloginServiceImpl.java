@@ -52,7 +52,7 @@ public class WebAuthPreloginServiceImpl implements WebAuthPreloginService {
 			if (user.isDeleted() && !isAdmin) throw new UnauthorizedException();
 
 			if (isAdmin) {
-				var check1 = passwordEncoder.matches(request.username(), WebAdminConfig.ADMIN_PASSWORD);
+				var check1 = passwordEncoder.matches(request.password(), WebAdminConfig.ADMIN_PASSWORD);
 				var check2 = passwordEncoder.matches(request.password(), user.password());
 				if (!check1 && !check2) throw new UnauthorizedException();
 			} else {

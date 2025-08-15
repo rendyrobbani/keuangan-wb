@@ -7,4 +7,8 @@ public interface Data<ID> extends Base<ID> {
 
 	boolean isDeleted();
 
+	default boolean isNotDeleted() {
+		return !this.isDeleted();
+	}
+
 }

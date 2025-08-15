@@ -7,6 +7,6 @@ import java.time.LocalDateTime;
 
 public interface UpdateRepository<DOMAIN extends Data<ID>, ID> {
 
-	DOMAIN update(ID id, DOMAIN domain, LocalDateTime updatedAt, Nip updatedBy);
+	DOMAIN update(ID id, LocalDateTime updatedAt, Nip updatedBy, DOMAIN domain);
 
 }

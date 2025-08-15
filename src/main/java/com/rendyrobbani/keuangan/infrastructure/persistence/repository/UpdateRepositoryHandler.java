@@ -11,7 +11,7 @@ public interface UpdateRepositoryHandler<ENTITY extends AbstractDataEntity<DOMAI
                                                                                                                              BaseRepositoryHandler<ENTITY, DOMAIN, ID> {
 
 	@Override
-	default DOMAIN update(ID id, DOMAIN domain, LocalDateTime updatedAt, Nip updatedBy) {
+	default DOMAIN update(ID id, LocalDateTime updatedAt, Nip updatedBy, DOMAIN domain) {
 		ENTITY entity = repository().findById(id).orElse(null);
 		if (entity == null) throw new RuntimeException("Entity with id " + id + " not found");
 		entity.update(domain, updatedAt, updatedBy);

@@ -54,4 +54,8 @@ public class BadRequestException extends HttpException {
 		this.errors = errors;
 	}
 
+	public BadRequestException(String field, String error) {
+		this(Map.of(field, List.of(error)));
+	}
+
 }
