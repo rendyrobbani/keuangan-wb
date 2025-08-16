@@ -1,22 +1,22 @@
-package com.rendyrobbani.keuangan.common.schemaa;
+package com.rendyrobbani.database.mariadb.anotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.METHOD)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Column {
 
 	String name();
 
-	String size() default "";
+	int length() default 0;
 
-	boolean isNullable() default true;
+	boolean autoIncrement() default false;
 
-	boolean isPrimaryKey() default false;
+	boolean primaryKey() default false;
 
-	boolean isAutoIncrement() default false;
+	boolean nullable() default true;
 
 }

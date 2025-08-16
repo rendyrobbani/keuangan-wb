@@ -1,18 +1,14 @@
-package com.rendyrobbani.keuangan.database.anotation;
+package com.rendyrobbani.database.mariadb.anotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.METHOD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Column {
+public @interface Uniques {
 
-	String name();
-
-	String size();
-
-	boolean nullable();
+	Unique[] value();
 
 }
