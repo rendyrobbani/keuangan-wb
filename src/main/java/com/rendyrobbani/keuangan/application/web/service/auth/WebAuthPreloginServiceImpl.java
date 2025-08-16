@@ -26,7 +26,7 @@ import java.util.ArrayList;
 @RequiredArgsConstructor
 public class WebAuthPreloginServiceImpl implements WebAuthPreloginService {
 
-	@Value("${com.rendyrobbani.latte.auth.default-password}")
+	@Value("${com.rendyrobbani.keuangan.auth.default-password}")
 	private String defaultPassword;
 
 	private final DataUser admin;

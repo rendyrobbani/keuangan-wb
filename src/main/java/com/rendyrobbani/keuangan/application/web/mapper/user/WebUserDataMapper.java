@@ -84,4 +84,23 @@ public final class WebUserDataMapper {
 		);
 	}
 
+	public static DataUser toDomain(DataUser user, String password) {
+		return new RecordOfWebUserData(user.nip().simple(),
+		                               user.nip(),
+		                               user.pangkat(),
+		                               user.name(),
+		                               user.titlePrefix(),
+		                               user.titleSuffix(),
+		                               password,
+		                               user.nip().dateOfBirth(),
+		                               user.pangkat().isPNS() ? user.nip().dateOfStart() : user.dateOfStart(),
+		                               user.nip().gender(),
+		                               user.nip().number(),
+		                               user.pangkat().isPNS(),
+		                               user.pangkat().isP3K(),
+		                               user.isLocked(),
+		                               user.isDeleted()
+		);
+	}
+
 }

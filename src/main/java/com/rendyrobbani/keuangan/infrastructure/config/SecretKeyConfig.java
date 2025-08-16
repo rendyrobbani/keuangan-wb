@@ -11,7 +11,7 @@ import javax.crypto.spec.SecretKeySpec;
 @Configuration
 public class SecretKeyConfig {
 
-	@Value("${com.rendyrobbani.latte.mode}")
+	@Value("${com.rendyrobbani.keuangan.mode}")
 	private String mode;
 
 	@Bean

@@ -12,7 +12,7 @@ import java.util.List;
 @Configuration
 public class CorsConfig {
 
-	@Value("${com.rendyrobbani.latte.cors.allowed-origin}")
+	@Value("${com.rendyrobbani.keuangan.cors.allowed-origin}")
 	private List<String> allowedOrigins;
 
 	@Bean

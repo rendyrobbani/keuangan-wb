@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class WebUserDataCreateServiceImpl implements WebUserDataCreateService {
 
-	@Value("${com.rendyrobbani.latte.auth.default-password}")
+	@Value("${com.rendyrobbani.keuangan.auth.default-password}")
 	private String defaultPassword;
 
 	private final BCryptPasswordEncoder passwordEncoder;

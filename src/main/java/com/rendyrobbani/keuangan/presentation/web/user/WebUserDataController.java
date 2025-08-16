@@ -64,4 +64,21 @@ public class WebUserDataController {
 		return response.success(deleteService.revive(id));
 	}
 
+	@PatchMapping("/web/user/{id}/lock")
+	public ResponseEntity<?> lock(@PathVariable String id) {
+		authorizationService.hasInRole(RoleEnum.PPKD);
+		return response.success(lockedService.lock(id));
+	}
+
+	@DeleteMapping("/web/user/{id}/lock")
+	public ResponseEntity<?> unlock(@PathVariable String id) {
+		authorizationService.hasInRole(RoleEnum.PPKD);
+		return response.success(lockedService.unlock(id));
+	}
+
+//	@PatchMapping("/web/user/{id}/password")
+//	public ResponseEntity<?> resetPassword(@PathVariable String id) {
+//		authorizationService.hasInRole(RoleEnum.PPKD);
+//		return response.success()
+//	}
 }

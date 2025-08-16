@@ -28,13 +28,13 @@ public class WebJwtServiceImpl implements WebJwtService {
 
 	private static final String KEY_ROLE = "roleId";
 
-	@Value("${com.rendyrobbani.latte.tahun}")
+	@Value("${com.rendyrobbani.keuangan.tahun}")
 	private Integer tahun;
 
-	@Value("${com.rendyrobbani.latte.auth.token-expired}")
+	@Value("${com.rendyrobbani.keuangan.auth.token-expired}")
 	private Integer expired;
 
-	@Value("${com.rendyrobbani.latte.auth.token-name}")
+	@Value("${com.rendyrobbani.keuangan.auth.token-name}")
 	private String tokenName;
 
 	private final SecretKey secretKey;
